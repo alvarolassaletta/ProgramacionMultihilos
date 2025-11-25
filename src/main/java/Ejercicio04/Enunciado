@@ -1,0 +1,4 @@
+/*4. Ejercicio: join() básico
+  Crea dos hilos:
+  • Hilo A tarda 3 segundos en terminar.
+  • Hilo B no puede comenzar hasta que A haya terminado → usa join().*/

@@ -1,0 +1,7 @@
+/*5. Ejercicio: Prioridades
+Crea 3 hilos:
+• Uno con prioridad mínima.
+• Otro con prioridad normal.
+• Otro con prioridad máxima.
+Cada hilo imprime su nombre 10 veces.
+Observa el orden y explica si cambia según ejecuciones.*/

@@ -1,0 +1,5 @@
+/*2. Ejercicio: Pausa de un hilo con sleep()
+Haz un hilo que:
+• Imprima "tic" cada 500 ms.
+• Cuando haya impreso 5 veces, termine.
+• Mientras tanto, el hilo main imprimirá “MAIN sigue…” cada 300 ms */

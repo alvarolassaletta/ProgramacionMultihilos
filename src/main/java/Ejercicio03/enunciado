@@ -1,0 +1,5 @@
+/*3. Ejercicio: isAlive()
+Crea un hilo que tarde 2 segundos en terminar.
+• Desde el main, antes de start(), comprueba isAlive().
+• Justo después de start(), vuelve a comprobar.
+• Después de join(), comprueba otra vez /*

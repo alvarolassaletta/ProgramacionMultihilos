@@ -1,0 +1,20 @@
+/*1. Ejercicio: Diferencia entre run() y start()
+Crea un programa que:
+• Tenga un hilo que imprime números del 1 al 5.
+• Llama a run() primero.
+• Luego llama a start().
+• Observa el orden de ejecución.
+• Explica por qué ocurre.*/
+
+
+/*Explicación
+
+Con run() no se esta creando ningún hilo. El método run se ejecuta en el  hilo main
+como un método más. No  implica concurrencia , ya que no se crea ningún hilo
+
+En cambio, con start()  se crea un hilo nuevo en el que se ejecuta el método run contenido en la clase
+que implementa la interfaz Runnable.
+El hilo main  y el hilo creado por el método start  se ejecutan paralelamente.
+El hilo main crea  el nuevo hilo, pero el hilo main continua su ejecución.
+
+*/
