@@ -1,0 +1,6 @@
+6. Ejercicio: Carrera de Hilos (con prioridades y sleep)
+Simula una carrera entre 3 hilos:
+• Cada hilo avanza de 0 a 100.
+• Cada paso es un número aleatorio entre 1 y 5.
+• Cada hilo tiene una prioridad distinta.
+• Imprime quién llega primero.
