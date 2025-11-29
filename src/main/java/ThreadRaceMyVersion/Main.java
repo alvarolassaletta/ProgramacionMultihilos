@@ -39,6 +39,7 @@ public class Main {
         }
         System.out.println("La carrera ha terminado.");
         ThreadRaceMyVersion.mostrarPodio();
+
         System.out.println("El hilo "+ Thread.currentThread().getName()+ " se reanuda y termina");
         System.out.println(" El hilo main sigue vivo = " + Thread.currentThread().isAlive());
 

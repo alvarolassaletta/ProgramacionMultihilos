@@ -9,6 +9,9 @@ public class ThreadRaceMyVersion implements Runnable {
     private static Map<Integer,String> podio= new LinkedHashMap<>();
     private static int posicionCarrera =1;
     private  static int counter=1;
+    /*Ests atributos  estáticos constituyen la zona crítica
+    * Los distintos hilos están utilizando estos atributos en el método llegarMeta*/
+
     private int id;
     private String corredor ;
     private int  distancia  = 0;
@@ -78,9 +81,12 @@ public class ThreadRaceMyVersion implements Runnable {
      public void llegarMeta(){
 
          if(distancia>=100){
-             System.out.println(this.corredor+ " ha llegado a la meta");
-             podio.put(posicionCarrera,this.corredor);
-             posicionCarrera++;
+             synchronized (ThreadRaceMyVersion.class){
+                 System.out.println(this.corredor+ " ha llegado a la meta");
+                 podio.put(posicionCarrera,this.corredor);
+                 posicionCarrera++;
+             }
+
          }
      }
 
@@ -95,9 +101,5 @@ public class ThreadRaceMyVersion implements Runnable {
             System.out.println(posicion +"º" +  " posición: " + corredor);
         }
      }
-
-
-
-
 
 }
