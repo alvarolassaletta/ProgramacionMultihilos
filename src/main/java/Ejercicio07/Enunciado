@@ -1,0 +1,6 @@
+/*7. Ejercicio: Tres tareas que deben ejecutarse en orden
+Tienes 3 hilos:
+• Hilo 1 debe ejecutar primero.
+• Hilo 2 debe esperar a que el 1 termine → join.
+• Hilo 3 debe esperar al 2 → join.
+Cada hilo imprime un mensaje.*/
