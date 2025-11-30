@@ -6,6 +6,9 @@ Los ejercicios están organizados por niveles de dificultad, desde conceptos bá
 
 Además el repositorio incluye un ejercicio adicional que implementa un carrera de hilos  personalizada.
 
+Algunos ejercicios se realizan de distintas formas. En estos casos, se incluye un paquete beta  con modos 
+alternativos  de plantear el ejericio. Es el caso de los ejercicios 08,09 y 10, entre otros.
+
 ---
 
 # 🚀 Ejercicios de Hilos — Nivel 1: Conceptos Básicos
