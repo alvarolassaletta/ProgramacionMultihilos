@@ -1,4 +1,4 @@
-package Ejercicio07;
+package Ejercicio07Beta;
 
 public class MainBeta {
     public static void main(String[] args) {

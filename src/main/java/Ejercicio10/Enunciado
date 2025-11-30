@@ -1,0 +1,5 @@
+/*10. Ejercicio: Contador compartido sin sincronización
+  Crea 2 hilos que incrementen el mismo contador 1000 veces.
+  Usa sleep(1) en algunas vueltas.
+  Observa resultados distintos cada ejecución → condición de carrera.
+  Explica por qué pasa.*/
