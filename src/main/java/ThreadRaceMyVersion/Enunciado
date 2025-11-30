@@ -1,28 +1,54 @@
-/*Crea un programa en Java que simule una carrera entre 5 corredores, utilizando hilos (threads).
+# 🏁 Simulación de Carrera con Hilos en Java
 
-Requisitos:
+Crear un programa en Java que simule una carrera entre varios corredores utilizando hilos (`Thread` y `Runnable`). La simulación debe reflejar el comportamiento implementado en la clase proporcionada: avance aleatorio, cansancio, descalificación y podio final.
 
-    --Cada corredor será representado por un hilo, por lo que debes crear una clase que implemente Runnable.
+---
 
-    --Cada corredor tendrá un nombre (por ejemplo: “Corredor 1”, “Corredor 2”, … “Corredor 5”).
+## 1. Corredores (Runnable)
 
-    --Cada corredor comenzará con una distancia recorrida inicial de 0 metros.
+Cada corredor debe:
 
-   -- La carrera finalizará cuando un corredor alcance o supere los 100 metros.
+- Tener un **nombre** y un **ID único**.
+- Empezar con **0 metros recorridos**.
+- Tener un estado que indique si está **cansado**.
+- Compartir con los demás hilos:
+  - Un **contador de IDs**.
+  - Un **mapa podio** (`LinkedHashMap`) donde se registrarán las posiciones.
+  - Un **contador de posición**.
 
-    --En cada iteración del hilo:
+Los elementos compartidos representan la **zona crítica** y deben protegerse mediante `synchronized`.
 
-        El corredor avanzará una cantidad aleatoria entre 1 y 5 metros.
+---
 
-        Luego, el hilo dormirá 100 milisegundos usando Thread.sleep(100).
+## 2. Funcionamiento de la carrera
 
-        Después mostrará por consola algo como:
+En cada iteración del método `run()`:
 
-            Corredor 3 ha avanzado: 42 metros
+- El corredor puede **ser descalificado** aleatoriamente (1 de cada 30):
+  - Su distancia vuelve a 0.
+  - Se muestra un mensaje.
+- Puede **cansarse** (1 de cada 10):
+  - Si está cansado → avanza entre 1 y 3 metros.
+  - Si no está cansado → avanza entre 1 y 5 metros.
+- El hilo duerme **100 ms** con `Thread.sleep(100)`.
+- Se muestra su progreso por consola.
 
+Cuando un corredor alcanza **100 metros o más**:
 
-    .--Cuando un corredor termine (llegue a 100 metros), deberá mostrar un mensaje:
+- Muestra un mensaje indicando que llegó a la meta.
+- Entra en la zona crítica para registrarse en el **podio**.
+- Obtiene la siguiente posición disponible.
 
-            Corredor 3 ha llegado a la meta
+---
 
---El programa principal (main) debe crear y arrancar los 5 hilos que participan en la carrera.*/
+## 3. Programa principal (main)
+
+El método `main` debe:
+
+1. Crear **5 corredores** con nombres diferentes.
+2. Crear un hilo (`Thread`) por cada corredor y asignar **prioridades distintas**.
+3. Iniciarlos con `start()`.
+4. Mostrar el mensaje:  Let the race begin!
+5. Usar `join()` para esperar a que todos terminen.
+6. Mostrar el mensaje:  La carrera ha terminado.
+7. Mostrar el **podio final**.
