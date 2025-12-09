@@ -1,0 +1,5 @@
+/*13. Ejercicio: Prioridades dinámicas
+  Crea 2 hilos que imprimen su nombre.
+  Mientras se ejecutan:
+  • El main cambia su prioridad cada segundo (entre MIN y MAX).
+  • Observa el efecto.*/
