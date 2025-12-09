@@ -1,0 +1,5 @@
+11. Ejercicio: Timer casero con hilos
+rea un hilo que:
+• Cada segundo incremente un contador.
+• Imprima el contador como si fuera un cronómetro.
+l main debe esperar 5 segundos y luego interrumpir el hil
