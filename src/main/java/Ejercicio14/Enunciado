@@ -1,0 +1,9 @@
+/*14. Ejercicio: Control de proceso con isAlive()
+
+  Un hilo va procesando 10 pasos con sleep(400).
+
+  Mientras tanto, el main:
+
+  • Cada 300 ms imprime si el hilo sigue vivo o ya ha terminado usando isAlive().
+
+  • Cuando termine, imprime "Proceso acabado".*/
