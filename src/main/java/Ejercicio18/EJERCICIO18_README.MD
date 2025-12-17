@@ -43,6 +43,8 @@ Ejercicio18/
 ├─ DirectoryTask.java        # Tarea para crear carpeta personal del usuario (Runnable)
 └─ SendEmailTask.java        # Tarea para enviar un correo al usuario (Runnable)
 
+```
+
  ## Flujo de ejecución
 
 1. **Registrar usuario**
