@@ -1,0 +1,7 @@
+20. Ejercicio: Backup simulado
+Crea un hilo que simule un backup de 10 pasos:
+• Cada paso tarda entre 300 y 700 ms.
+El main:
+• Comprueba isAlive() cada 200 ms.10
+• Si pasan más de 3 segundos sin completar el backup → muestra un aviso.
+• Espera a que termine con join().

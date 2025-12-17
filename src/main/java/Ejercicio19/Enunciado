@@ -1,0 +1,8 @@
+/*19. Ejercicio: Productor lento y consumidor rápido
+(No usar wait/notify todavía: versión con sleep.)
+
+• Productor genera números cada 700 ms.
+• Consumidor imprime números cada 300 ms.
+
+Ambos imprimen sus estados continuamente.
+Usa isAlive() para mostrar si alguno termina antes.*/
